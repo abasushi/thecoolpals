@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
 <form action="">
     <label>Time:</label>
     <input type="datetime-local" id=StationTime" name="StationName">
@@ -35,9 +36,10 @@
      <div class="countdown">00 : 00 : 00 : 00</div>
      </label>
      </div>
-
+<!--script for timer-->
      <script>
         // Setup End Date for Countdown (getTime == Time in Milleseconds)
+        //ung echo dito is dapat mapapasa ng datas ng nasa form papunta dito, idk if tama ung logic ko since di ko mapagana ung forms
 let launchDate = new Date(<?php echo $_GET["StationTime"]; ?>).getTime();
 
 // Setup Timer to tick every 1 second
