@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/styles.css">
-    <title>SoftEng</title>
+    <title>Libertad</title>
 </head>
 
 <body>
-
     <div class="dropdown">
         <button class="dropbtn">Stations</button>
         <div class="dropdown-content">
@@ -18,16 +17,13 @@
             <a href="<?php echo base_url() . "stations/edsa" ?>">EDSA</a>
             <a href="<?php echo base_url() . "stations/libertad" ?>">Libertad</a>
         </div>
-    </div>
-
-    currently Home
-
-    <label for="cars">Station</label>
-
+        </div>
     <br>
-    <br>
+    You are at Libertad.
 
-    <p>Next train will be arriving in --time--</p>
+    <p>Next Northbound train will be arriving in --time--</p>
+    <p>Next Southbound train will be arriving in --time--</p>
+
 </body>
 
 </html>
