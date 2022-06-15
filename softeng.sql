@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2022 at 10:44 AM
+-- Generation Time: Jun 11, 2022 at 09:26 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -46,6 +46,15 @@ CREATE TABLE `station` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `station`
+--
+
+INSERT INTO `station` (`stationId`, `stationName`, `stationArrive`) VALUES
+(1, 'BACLARAN', '06:13:00.000000'),
+(2, 'EDSA', '15:10:00.000000'),
+(3, 'LIBERTAD', '10:06:00.000000');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -75,7 +84,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `station`
 --
 ALTER TABLE `station`
-  MODIFY `stationId` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `stationId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
