@@ -11,12 +11,10 @@ class Stations_Model extends CI_Model
             return $query->result_array();
     
         }    
-        public function insert_time(){
-            $data=array(
-                  'stationArrive'=>$this->input->post('stationArrive'),
-            
-            );
-            return $this->db->insert('station',$data);
+        function saverecords($data){
+            $this->db->insert('station',$data);
+            return true;
         }   
+
       
 }

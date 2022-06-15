@@ -9,14 +9,14 @@
 </head>
 
 <body>
-<?=validation_errors();?>
-<?=form_open('stationforms');?>
+<form method="post" action="<?=base_url()?>stations/stationforms">
+
     <label>Time:
-    <input type="time" class="form-control" id="StationTime" name="StationTime">
+    <input type="text" class="form-control" id="stationArrive" name="stationArrive">
     </label>
 <br>   
-<button type="submit" id="submitButton">Submit</button>
-
+<input type="submit" name="save" value="Submit"/>
+</form>
 <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
     <br>
     <br>
@@ -27,12 +27,8 @@
      </label>
      <input type="text" id="currentTime">
      </div>
-     <ul>
-        <?php foreach($time as $row){?>
-        <li><?=$row['stationArrive'];?></li>
-        <?php }?>
-     </ul>
-<!--script for timer-->
+    
+
      <script>
  // Setup End Date for Countdown (getTime == Time in Milleseconds)
 let launchDate = new Date("June 15, 2022 12:05:00").getTime();
@@ -74,10 +70,12 @@ function tick () {
   }
 }
 </script>
-  var today = $_GET['StationTime'];
+
+<script>
+var today = $_GET['StationTime'];
 
   document.getElementById("currentTime").value = today;
-</>
+</script>
 </body>
 
 </html>

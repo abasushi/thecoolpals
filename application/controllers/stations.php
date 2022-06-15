@@ -20,19 +20,30 @@ class Stations extends CI_Controller {
 	{
 		$this->load->view('stations/libertad');
 	}
-	public function stationforms()
-	{
-		$this->form_validation->set_rules('stationArrive','StationArrive','required');
-		if($this->form_validation->run()==FALSE){
-		$this->load->model('stations_model');
-		$data['time']=$this->stations_model->get_posts();
-		print_r($data['time']);
-		$this->load->view('stations/stationforms',$data);
-
-	}else{
-		$this->stations_model->insert_time();
-		$this->session->set_flashdata('post_added','New post was added');
-		redirect(base_url()); 
+	public function __construct(){
+		parent::__construct();
+		$this->load->database();
+		$this->load->model('Stations_Model');
 	}
-}
+	public function stationforms(){
+		
+		$this->load->view('stations/stationforms'); 
+		if($this->input->post('save')){
+			  $data['stationArrive']=$this->input->post('stationArrive');
+			  $response=$this->Stations_Model->saverecords($data);
+			  if($response==true){
+				echo"saved";
+			  }
+			  else{
+				echo"error";
+			  }
+		}
+	}
+	public function stationview()
+	{
+		$this->load->model('Stations_Model');
+		$data['time']=$this->Stations_Model->get_posts();
+		print_r($data['time']);
+		$this->load->view('stations/stationview',$data);
+	}	
 }

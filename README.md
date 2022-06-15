@@ -15,11 +15,14 @@ Jun 11 - 2022
 + Tweaked dropdown box for changing Stations
 + Templates folder (header/footer)
 
-JUN 15 2022
-+tried connecting forms to db to get input time
-+still not succesfull, the link upon submitting is changing and the datas are not being passsed
-+localhost/softeng/systems/systemforms
-
-
+Jun 15 - 2022 5:17 
++stations/stationview
++stations/stationforms
++stationforms connected to db
++stations_model new function "saverecord"
++controller newfunction "stationforms"
 Issues:
 - Time from SQL Database cannot be displayed
+-change stationArrive value to varchar
+- countdown clock function is still not accessible
+-need new logic for timeNow - stationArrive (value of 2 data are not compatible for now, thinking for setting  stationArrive along with timeNow to have a function that'll transform it to total seconds so it can be deducted to each other.)
