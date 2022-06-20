@@ -42,7 +42,7 @@ CREATE TABLE `admin` (
 CREATE TABLE `station` (
   `stationId` int(12) NOT NULL,
   `stationName` text NOT NULL,
-  `stationArrive` time(6) NOT NULL
+  `stationArrive` text(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
