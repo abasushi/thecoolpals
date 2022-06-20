@@ -9,14 +9,30 @@
 </head>
 
 <body>
-<form method="post" action="<?=base_url()?>stations/stationforms">
 
-    <label>Time:
-    <input type="text" class="form-control" id="stationArrive" name="stationArrive">
-    </label>
-<br>   
-<input type="submit" name="save" value="Submit"/>
-</form>
+<table width="600" border="1" cellspacing="5" cellpadding="5">
+  <tr style="background:#CCC">
+    <th>Sr No</th>
+    <th>First_name</th>
+    <th>Last_name</th>
+    <th>Email Id</th>
+   <th>Update</th>
+  </tr>
+  <?php
+  $i=1;
+  foreach($data as $row)
+  {
+  echo "<tr>";
+  echo "<td>".$i."</td>";
+  echo "<td>".$row->stationName."</td>";
+  echo "<td>".$row->stationArrive."</td>";
+  echo "<td><a href='updatedata?id=".$row->stationId."'>Update</a></td>";
+  echo "</tr>";
+  $i++;
+  }
+   ?>
+</table>
+
 <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
     <br>
     <br>

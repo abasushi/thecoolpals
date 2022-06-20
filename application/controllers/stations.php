@@ -25,25 +25,23 @@ class Stations extends CI_Controller {
 		$this->load->database();
 		$this->load->model('Stations_Model');
 	}
+
 	public function stationforms(){
-		
-		$this->load->view('stations/stationforms'); 
-		if($this->input->post('save')){
-			  $data['stationArrive']=$this->input->post('stationArrive');
-			  $response=$this->Stations_Model->saverecords($data);
-			  if($response==true){
-				echo"saved";
-			  }
-			  else{
-				echo"error";
-			  }
-		}
+		$result['data']=$this->Stations_Model->display_records();
+		$this->load->view('stations/stationforms',$result);
 	}
-	public function stationview()
+	public function updatedata()
 	{
-		$this->load->model('Stations_Model');
-		$data['time']=$this->Stations_Model->get_posts();
-		print_r($data['time']);
-		$this->load->view('stations/stationview',$data);
-	}	
+		$stationId=$this->input->get('id');
+		$result['data']=$this->Stations_Model->displayrecordsById($stationId);
+		$this->load->view('stations/update_records',$result);
+			if($this->input->post('update'))
+			{
+				$stationArrive=$this->input->post('stationArrive');
+				$this->Stations_Model->update_records($stationArrive,$stationId);
+				echo "time changed successfully";
+			}
+	}
 }
+?>
+		
