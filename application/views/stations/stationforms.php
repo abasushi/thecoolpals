@@ -20,12 +20,13 @@
   </tr>
   <?php
   $i=1;
+  $separator=":";
   foreach($data as $row)
   {
   echo "<tr>";
   echo "<td>".$i."</td>";
   echo "<td>".$row->stationName."</td>";
-  echo "<td>".$row->stationArrive."</td>";
+  echo "<td>".$row->stationHours.$separator.$row->stationMinutes.$separator.$row->stationSeconds."</td>";
   echo "<td><a href='updatedata?id=".$row->stationId."'>Update</a></td>";
   echo "</tr>";
   $i++;

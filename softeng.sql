@@ -42,17 +42,19 @@ CREATE TABLE `admin` (
 CREATE TABLE `station` (
   `stationId` int(12) NOT NULL,
   `stationName` text NOT NULL,
-  `stationArrive` text(6) NOT NULL
+  `stationHours`int(23) NOT NULL,
+  `stationMinutes`int(59) NOT NULL,
+  `stationSeconds`int(59) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `station`
 --
 
-INSERT INTO `station` (`stationId`, `stationName`, `stationArrive`) VALUES
-(1, 'BACLARAN', '06:13:00.000000'),
-(2, 'EDSA', '15:10:00.000000'),
-(3, 'LIBERTAD', '10:06:00.000000');
+INSERT INTO `station` (`stationId`, `stationName`, `stationHours`,`stationMinutes`,`stationSeconds`) VALUES
+(1, 'BACLARAN', '12','30','00'),
+(2, 'EDSA',  '12','35','00'),
+(3, 'LIBERTAD',  '12','40','24');
 
 --
 -- Indexes for dumped tables

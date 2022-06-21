@@ -37,8 +37,10 @@ class Stations extends CI_Controller {
 		$this->load->view('stations/update_records',$result);
 			if($this->input->post('update'))
 			{
-				$stationArrive=$this->input->post('stationArrive');
-				$this->Stations_Model->update_records($stationArrive,$stationId);
+				$stationHours=$this->input->post('stationHours');
+				$stationMinutes=$this->input->post('stationMinutes');
+				$stationSeconds=$this->input->post('stationSeconds');
+				$this->Stations_Model->update_records($stationHours,$stationMinutes,$stationSeconds,$stationId);
 				echo "time changed successfully";
 			}
 	}

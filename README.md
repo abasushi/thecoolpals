@@ -30,6 +30,13 @@ Issues:
 Jun 20 - 2022 4:52
 +changed stations/stationview to update page
 +station_model and stations new functions for updates
+
+
+Jun 21 - 2022 12:14
+-tapos na whole function ng countdown
+-changed sql file, so please change your database
+-changed stationArrive to stationHour,stationMinutes,stationSeconds
 +things to do: 
-            id fetching++fetching of time on one station, 
-            logic for countdown timer
+            transport display to userside
+            transport update forms to admin side
+            after that, frontend make it ungaa bungaa
