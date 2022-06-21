@@ -38,9 +38,10 @@ Jun 21 - 2022 12:14
 -changed stationArrive to stationHour,stationMinutes,stationSeconds
 Jun 21 - 2022 14:16 
 -added automated increment for timer
-Jun 21 -2022 16:14
+Jun 21 - 2022 16:14
 -fixed index page and connected to stationpages
-
+Jun 21 - 2022 17:32
+-different auto increment per station
 +things to do: 
             transport display to userside
             transport update forms to admin side
