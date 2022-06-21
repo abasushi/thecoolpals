@@ -30,6 +30,7 @@ class Stations extends CI_Controller {
 		$result['data']=$this->Stations_Model->display_records();
 		$this->load->view('stations/stationforms',$result);
 	}
+	//display data and update data for controllers
 	public function updatedata()
 	{
 		$stationId=$this->input->get('id');

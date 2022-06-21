@@ -36,6 +36,8 @@ Jun 21 - 2022 12:14
 -tapos na whole function ng countdown
 -changed sql file, so please change your database
 -changed stationArrive to stationHour,stationMinutes,stationSeconds
+Jun 21 - 2022 14:16 
+-added automated increment for timer
 +things to do: 
             transport display to userside
             transport update forms to admin side
