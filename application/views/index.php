@@ -11,23 +11,28 @@
 
 <body>
 
-    <div class="dropdown">
-        <button class="dropbtn">Stations</button>
-        <div class="dropdown-content">
-            <a href="<?php echo base_url() . "stations/baclaran" ?>">Baclaran</a>
-            <a href="<?php echo base_url() . "stations/edsa" ?>">EDSA</a>
-            <a href="<?php echo base_url() . "stations/libertad" ?>">Libertad</a>
-        </div>
-    </div>
-
-    currently Home
-
-    <label for="cars">Station</label>
-
-    <br>
-    <br>
-
-    <p>Next train will be arriving in --time--</p>
+<table width="600" border="1" cellspacing="5" cellpadding="5">
+  <tr style="background:#CCC">
+    <th>Sr No</th>
+    <th>Station name</th>
+    <th>Set Time</th>
+   <th>Update</th>
+  </tr>
+  <?php
+  $i=1;
+  $separator=":";
+  foreach($data as $row)
+  {
+  echo "<tr>";
+  echo "<td>".$i."</td>";
+  echo "<td>".$row->stationName."</td>";
+  echo "<td>".$row->stationHours.$separator.$row->stationMinutes.$separator.$row->stationSeconds."</td>";
+  echo "<td><a href='stations/baclaran?id=".$row->stationId."'>view</a></td>";
+  echo "</tr>";
+  $i++;
+  }
+   ?>
+</table>
 </body>
 
 </html>
