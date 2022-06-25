@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2022 at 09:26 AM
+-- Generation Time: Jun 25, 2022 at 09:52 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -28,10 +28,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `adminId` int(12) NOT NULL,
-  `adminUser` varchar(12) NOT NULL,
-  `adminPassword` varchar(12) NOT NULL
+  `adminId` int(11) NOT NULL,
+  `adminusername` varchar(20) NOT NULL,
+  `adminpassword` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminId`, `adminusername`, `adminpassword`) VALUES
+(1, 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -42,27 +49,40 @@ CREATE TABLE `admin` (
 CREATE TABLE `station` (
   `stationId` int(12) NOT NULL,
   `stationName` text NOT NULL,
-  `stationArrive` time(6) NOT NULL
+  `stationHours` int(23) NOT NULL,
+  `stationMinutes` int(59) NOT NULL,
+  `stationSeconds` int(59) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `station`
 --
 
-INSERT INTO `station` (`stationId`, `stationName`, `stationArrive`) VALUES
-(1, 'BACLARAN', '06:13:00.000000'),
-(2, 'EDSA', '15:10:00.000000'),
-(3, 'LIBERTAD', '10:06:00.000000');
+INSERT INTO `station` (`stationId`, `stationName`, `stationHours`, `stationMinutes`, `stationSeconds`) VALUES
+(1, 'BACLARAN', 18, 45, 0),
+(2, 'EDSA', 18, 45, 0),
+(3, 'LIBERTAD', 18, 45, 0),
+(4, 'GIL PUYAT', 18, 45, 0),
+(5, 'VITO CRUZ', 18, 45, 0),
+(6, 'QUIRINO', 18, 45, 0),
+(7, 'PEDRO GIL', 18, 45, 0),
+(8, 'UNITED NATIONS', 18, 45, 0),
+(9, 'CENTRAL', 18, 45, 0),
+(10, 'CARRIEDO', 18, 45, 0),
+(11, 'DOROTEO JOSE', 18, 45, 0),
+(12, 'BAMBANG', 18, 45, 0),
+(13, 'TAYUMAN', 18, 45, 0),
+(14, 'BLUMENTRITT', 18, 45, 0),
+(15, 'ABAD SANTOS', 18, 45, 0),
+(16, 'R.PAPA', 18, 45, 0),
+(17, '5TH AVENUE', 18, 45, 0),
+(18, 'MONUMENTO', 18, 45, 0),
+(19, 'BALINTAWAK', 18, 45, 0),
+(20, 'ROOSEVELT', 18, 45, 0);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`adminId`);
 
 --
 -- Indexes for table `station`
@@ -75,16 +95,10 @@ ALTER TABLE `station`
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `adminId` int(12) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `station`
 --
 ALTER TABLE `station`
-  MODIFY `stationId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `stationId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,4 +1,3 @@
-	<!-- Login Start -->
 	<section class="Form my-4 mx-5 w-100 mx-auto text-white">
 		<h1 class="text-center">Admin Panel</h1>
 		<h5 class="text-center">Please Log in to Continue</h5>
@@ -30,29 +29,15 @@
 			</div>
 		</div>
 	</section>
-	<!-- Login End -->
-
-
-
-	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	</body>
 
 	</html>
-
-
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<!-- Popper JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	</body>
 
 	</html>
-	<!-- Login End -->
 
 	<!--<?= isset($message) ? $message : ""; ?>

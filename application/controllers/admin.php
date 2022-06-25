@@ -42,10 +42,6 @@ class Admin extends CI_Controller {
       	if(isset($data['admin']) && $data['admin'] != null){
 		
             $this->load->model('admin_model');
-			$this->load->model('reservation_model');
-			$this->load->model('user_model');
-			$data['reservation'] = $this->reservation_model->getRows();
-			$data['users'] = $this->user_model->getRows();
 			$this->load->view('admin/dashboard', $data);
 			}
 		}
