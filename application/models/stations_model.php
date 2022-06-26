@@ -22,9 +22,9 @@ class Stations_Model extends CI_Model
             return $query->result();
         }
         //update database with new time
-        function update_records($stationHours,$stationMinutes,$stationSeconds,$stationId,$stationName)
+        function update_records($stationHours,$stationMinutes,$stationSeconds,$stationHours2,$stationMinutes2,$stationSeconds2,$stationId)
         {
-            $query=$this->db->query("update station SET stationHours='$stationHours', stationName='$stationName', stationMinutes='$stationMinutes',stationSeconds='$stationSeconds' where stationId='$stationId'");
+            $query=$this->db->query("update station SET stationHours='$stationHours', stationMinutes='$stationMinutes',stationSeconds='$stationSeconds',stationHours2='$stationHours2', stationMinutes2='$stationMinutes2',stationSeconds2='$stationSeconds2' where stationId='$stationId'");
         }
 
       

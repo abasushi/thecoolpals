@@ -13,9 +13,7 @@
 
 <table width="600" border="1" cellspacing="5" cellpadding="5">
   <tr style="background:#CCC">
-    <th>Station name</th>
-  
-   <th>view</th>
+    <th>Station</th>
   </tr>
   <?php
   $i=1;
@@ -24,8 +22,7 @@
   {
   echo "<tr>";
 
-  echo "<td>".$row->stationName."</td>";
-  echo "<td><a href='stations/station?id=".$row->stationId."'>view</a></td>";
+  echo "<td><a href='stations/station?id=".$row->stationId."'>$row->stationName</a></td>";
   echo "</tr>";
   $i++;
   }

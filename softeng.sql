@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2022 at 09:52 AM
+-- Generation Time: Jun 26, 2022 at 11:27 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -51,34 +51,37 @@ CREATE TABLE `station` (
   `stationName` text NOT NULL,
   `stationHours` int(23) NOT NULL,
   `stationMinutes` int(59) NOT NULL,
-  `stationSeconds` int(59) NOT NULL
+  `stationSeconds` int(59) NOT NULL,
+  `stationHours2` int(23) NOT NULL,
+  `stationMinutes2` int(59) NOT NULL,
+  `stationSeconds2` int(59) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `station`
 --
 
-INSERT INTO `station` (`stationId`, `stationName`, `stationHours`, `stationMinutes`, `stationSeconds`) VALUES
-(1, 'BACLARAN', 18, 45, 0),
-(2, 'EDSA', 18, 45, 0),
-(3, 'LIBERTAD', 18, 45, 0),
-(4, 'GIL PUYAT', 18, 45, 0),
-(5, 'VITO CRUZ', 18, 45, 0),
-(6, 'QUIRINO', 18, 45, 0),
-(7, 'PEDRO GIL', 18, 45, 0),
-(8, 'UNITED NATIONS', 18, 45, 0),
-(9, 'CENTRAL', 18, 45, 0),
-(10, 'CARRIEDO', 18, 45, 0),
-(11, 'DOROTEO JOSE', 18, 45, 0),
-(12, 'BAMBANG', 18, 45, 0),
-(13, 'TAYUMAN', 18, 45, 0),
-(14, 'BLUMENTRITT', 18, 45, 0),
-(15, 'ABAD SANTOS', 18, 45, 0),
-(16, 'R.PAPA', 18, 45, 0),
-(17, '5TH AVENUE', 18, 45, 0),
-(18, 'MONUMENTO', 18, 45, 0),
-(19, 'BALINTAWAK', 18, 45, 0),
-(20, 'ROOSEVELT', 18, 45, 0);
+INSERT INTO `station` (`stationId`, `stationName`, `stationHours`, `stationMinutes`, `stationSeconds`, `stationHours2`, `stationMinutes2`, `stationSeconds2`) VALUES
+(1, 'BACLARAN', 18, 45, 0, 0, 0, 0),
+(2, 'EDSA', 19, 0, 0, 0, 0, 0),
+(3, 'LIBERTAD', 18, 45, 0, 0, 0, 0),
+(4, 'GIL PUYAT', 18, 45, 0, 0, 0, 0),
+(5, 'VITO CRUZ', 18, 45, 0, 0, 0, 0),
+(6, 'QUIRINO', 18, 45, 0, 0, 0, 0),
+(7, 'PEDRO GIL', 18, 45, 0, 0, 0, 0),
+(8, 'UNITED NATIONS', 18, 45, 0, 0, 0, 0),
+(9, 'CENTRAL', 18, 45, 0, 0, 0, 0),
+(10, 'CARRIEDO', 18, 45, 0, 0, 0, 0),
+(11, 'DOROTEO JOSE', 18, 45, 0, 0, 0, 0),
+(12, 'BAMBANG', 18, 45, 0, 0, 0, 0),
+(13, 'TAYUMAN', 18, 45, 0, 0, 0, 0),
+(14, 'BLUMENTRITT', 18, 45, 0, 0, 0, 0),
+(15, 'ABAD SANTOS', 18, 45, 0, 0, 0, 0),
+(16, 'R.PAPA', 18, 45, 0, 0, 0, 0),
+(17, '5TH AVENUE', 18, 45, 0, 0, 0, 0),
+(18, 'MONUMENTO', 18, 45, 0, 0, 0, 0),
+(19, 'BALINTAWAK', 18, 45, 0, 0, 0, 0),
+(20, 'ROOSEVELT', 0, 0, 0, 5, 0, 0);
 
 --
 -- Indexes for dumped tables

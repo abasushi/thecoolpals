@@ -5,12 +5,15 @@ class Admin extends CI_Controller {
 	public function __construct()
     {
         parent::__construct();
-        $this->load->helper('url');  
+        $this->load->helper('url'); 
+		$this->load->database();
+		$this->load->model('Stations_Model');
     }
 
 
     public function adminlogin()
 	{
+		
         $data = array();
         $data = $this->input->post();
 		
@@ -24,8 +27,12 @@ class Admin extends CI_Controller {
             } 
 			else
 			{
+				
                 $_SESSION['adminId'] = $return[0]['adminId'];
 				$_SESSION['adminusername'] = $return[0]['adminusername'];
+
+
+				
 				redirect(base_url(). "admin/dashboard"); 
             }
         }
@@ -41,8 +48,12 @@ class Admin extends CI_Controller {
       	$data['admin'] = $_SESSION['adminId'];
       	if(isset($data['admin']) && $data['admin'] != null){
 		
-            $this->load->model('admin_model');
-			$this->load->view('admin/dashboard', $data);
+			$result['data']=$this->Stations_Model->display_records();
+			$this->load->model('admin_model');
+			$this->load->view('admin/dashboard',$result);
+			
+ 
+
 			}
 		}
 		else 
@@ -114,5 +125,3 @@ class Admin extends CI_Controller {
 	
 	
 }
-?>
-

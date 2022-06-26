@@ -30,7 +30,10 @@ class Stations extends CI_Controller {
 				$stationHours=$this->input->post('stationHours');
 				$stationMinutes=$this->input->post('stationMinutes');
 				$stationSeconds=$this->input->post('stationSeconds');
-				$this->Stations_Model->update_records($stationHours,$stationMinutes,$stationSeconds,$stationId);
+				$stationHours2=$this->input->post('stationHours2');
+				$stationMinutes2=$this->input->post('stationMinutes2');
+				$stationSeconds2=$this->input->post('stationSeconds2');
+				$this->Stations_Model->update_records($stationHours,$stationMinutes,$stationSeconds,$stationHours2,$stationMinutes2,$stationSeconds2,$stationId);
 				
 				echo "time changed successfully";
 			}

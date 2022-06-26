@@ -56,4 +56,3 @@ Jun 25 - 4:23 PM
 + Admin Dashboard updated (not yet done fully)
 + new Javascript Folder and main.js
 + Updated SQL File
-+ Admin side can now be accesible: (admin,admin)
