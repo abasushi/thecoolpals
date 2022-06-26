@@ -56,3 +56,11 @@ Jun 25 - 4:23 PM
 + Admin Dashboard updated (not yet done fully)
 + new Javascript Folder and main.js
 + Updated SQL File
+
+Jun 26 - 5:30 PM
++ admin can now see the database
++ updated controller and model for southbound timer
++ Updated SQL File
++ things to do:
+	display southbound timer
+	admin cannot update timer
