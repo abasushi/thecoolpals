@@ -1,140 +1,119 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Update Data</title>
+  <title>Update Data</title>
 </head>
- 
+
 <body>
- <?php
-  $i=1;
-  foreach($data as $row) 
-  {
+  <?php
+  $i = 1;
+  foreach ($data as $row) {
   ?>
-	<form method="post">
-		<table width="600" border="1" cellspacing="5" cellpadding="5">
-  <tr>
-    <td width="230">Enter new station arrival Hour </td>
-    <td width="329"><input type="number" name="stationHours" min="0"max="23" value="<?php echo $row->stationHours; ?>"/></td>
-  </tr>
-  <tr>
-    <td width="230">Enter new station arrival minute </td>
-    <td width="329"><input type="number" name="stationMinutes" min="0"max="59"value="<?php echo $row->stationMinutes; ?>"/></td>
-  </tr>
-  <tr>
-    <td width="230">Enter new station arrival seconds </td>
-    <td width="329"><input type="number" name="stationSeconds" min="0"max="59" value="<?php echo $row->stationSeconds; ?>"/></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-	<input type="submit" name="update" value="Update_Records"/></td>
-  
-
-  </tr>
-</table>
-	</form>
-  <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
-  <br>
+    <form method="post">
+      <table width="600" border="1" cellspacing="5" cellpadding="5">
+        <tr>
+          <td width="230">Enter new station arrival Hour </td>
+          <td width="329"><input type="number" name="stationHours" min="0" max="23" value="<?php echo $row->stationHours; ?>" /></td>
+        </tr>
+        <tr>
+          <td width="230">Enter new station arrival minute </td>
+          <td width="329"><input type="number" name="stationMinutes" min="0" max="59" value="<?php echo $row->stationMinutes; ?>" /></td>
+        </tr>
+        <tr?>
+          <td width="230">Enter new station arrival seconds </td>
+          <td width="329"><input type="number" name="stationSeconds" min="0" max="59" value="<?php echo $row->stationSeconds; ?>" /></td>
+          </tr>
+          <tr>
+            <td width="230">Enter new station arrival Hour2 </td>
+            <td width="329"><input type="number" name="stationHours2" min="0" max="23" value="<?php echo $row->stationHours2; ?>" /></td>
+          </tr>
+          <tr>
+            <td width="230">Enter new station arrival minute2 </td>
+            <td width="329"><input type="number" name="stationMinutes2" min="0" max="59" value="<?php echo $row->stationMinutes2; ?>" /></td>
+          </tr>
+          <tr>
+            <td width="230">Enter new station arrival seconds2 </td>
+            <td width="329"><input type="number" name="stationSeconds2" min="0" max="59" value="<?php echo $row->stationSeconds2; ?>" /></td>
+          </tr>
+          <td colspan="2" align="center">
+            <input type="submit" name="update" value="Update_Records" />
+          </td>
+          </tr>
+      </table>
+    </form>
+    <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
     <br>
     <br>
-     <div class="box">
-    <label>Next train will arrive at 
-     <div class="countdown">00 : 00 : 00</div>
-     <br>
-     </label>
-     <p id="currentTime"></p>
-     <br>
-     <p>Set Time:</p>
-     <p id="setTime"></p>
-     <p id="newTime"></p>
-     
-     </div>
-    
+    <br>
+    <div class="box">
+      <label>Northbound
+        <div class="countdown">00 : 00 : 00</div>
+        <br>
+      </label>Southbound
+      <div class="countdown2">00 : 00 : 00</div>
 
-     <script>
- // Setup End Date for Countdown (getTime == Time in Milleseconds)
-let launchDate = new Date("June 15, 2022 12:05:00").getTime();
+    </div>
 
-// Setup Timer to tick every 1 second
-let timer = setInterval(tick, 1000);
-let idnum=<?php echo $row->stationId;?>
 
-function tick () {
-  // Get current time
-  let now = new Date();
-  // get current hours in seconds
-  nowHours=now.getHours()*3600;
-//get current minutes in seconds
-  nowMinutes=now.getMinutes()*60;
-  //get total seconds
-  let nowSeconds=now.getSeconds()+nowHours+nowMinutes;
-  //get
-  let setHours=<?php echo $row->stationHours; ?>*3600
-  let setMinutes=<?php echo $row->stationMinutes; ?>*60
-  let setSeconds=<?php echo $row->stationSeconds; ?> + setMinutes + setHours
-document.getElementById("currentTime").innerText=nowSeconds;
-document.getElementById("setTime").innerText=setSeconds;
-//if idnum==baclaran
-if(idnum==1){
-if(setSeconds<nowSeconds)
-{
-  do
-  {
-  setSeconds=setSeconds+300;//add 5 mins; mins*60
-    }while(setSeconds<nowSeconds)
-  }
-}
-//if idnum==EDSA
-if(idnum==2){
-if(setSeconds<nowSeconds)
-{
-  do
-  {
-  setSeconds=setSeconds+180;//add 5 mins; mins*60
-    }while(setSeconds<nowSeconds)
-  }
-}
-//if idnum==Libertad
-if(idnum==3){
-if(setSeconds<nowSeconds)
-{
-  do
-  {
-  setSeconds=setSeconds+180;//add 5 mins; mins*60
-    }while(setSeconds<nowSeconds)
-  }
-}
+    <script>
+      let timer = setInterval(tick, 1000);
 
-let t=setSeconds-nowSeconds
-document.getElementById("newTime").innerText=t;
-  // Check if time is above 0
-  if (t > 0) {
-    // Setup Days, hours, seconds and minutes
-    // Algorithm to calculate days..
-    // Algorithm to calculate hours
-    let hours = Math.floor(t /( 60 * 60));
-  
+      let timer2 = setInterval(tick, 1000);
 
-    // Algorithm to calculate minutes
-    let mins = Math.floor((t % ( 60 * 60)) / ( 60));
-   
+      function tick() {
+        let now = new Date();
+        nowHours = now.getHours() * 3600;
+        nowMinutes = now.getMinutes() * 60;
+        let nowSeconds = now.getSeconds() + nowHours + nowMinutes;
 
-    // Algorithm to calc seconds
-    let secs = Math.floor((t % (60) ));
+        let setHours = <?php echo $row->stationHours; ?> * 3600
+        let setMinutes = <?php echo $row->stationMinutes; ?> * 60
+        let setSeconds = <?php echo $row->stationSeconds; ?> + setMinutes + setHours
 
-    // Create Time String
-    let time = `${hours} : ${mins} : ${secs}`;
+        let setHours2 = <?php echo $row->stationHours2; ?> * 3600
+        let setMinutes2 = <?php echo $row->stationMinutes2; ?> * 60
+        let setSeconds2 = <?php echo $row->stationSeconds2; ?> + setMinutes2 + setHours2
 
-    // Set time on document
-    document.querySelector('.countdown').innerText = time;
-  }
-}
-</script>
 
-<script>
-var today = $_GET['StationTime'];
+        if (setSeconds < nowSeconds) {
+          do {
+            setSeconds = setSeconds + 300;
+          }
+          while (setSeconds < nowSeconds)
+        }
+        if (setSeconds2 < nowSeconds) {
+          do {
+            setSeconds2 = setSeconds2 + 300;
+          }
+          while (setSeconds2 < nowSeconds)
+        }
+        let t = setSeconds - nowSeconds
+        let t2 = setSeconds2 - nowSeconds
+        if (t > 0) {
+          let hours = Math.floor(t / (60 * 60));
+          let mins = Math.floor((t % (60 * 60)) / (60));
+          let secs = Math.floor((t % (60)));
+          let time = `${hours} : ${mins} : ${secs}`;
+          document.querySelector('.countdown').innerText = time;
+        }
+        if (t2 > 0) {
+          let hours2 = Math.floor(t2 / (60 * 60));
+          let mins2 = Math.floor((t2 % (60 * 60)) / (60));
+          let secs2 = Math.floor((t2 % (60)));
+          let time2 = `${hours2} : ${mins2} : ${secs2}`;
+          document.querySelector('.countdown2').innerText = time2;
+        }
 
-  document.getElementById("currentTime").value = today;
-</script>
-	<?php } ?>
+      }
+    </script>
+
+    <script>
+      var today = $_GET['StationTime'];
+
+      document.getElementById("currentTime").value = today;
+    </script>
+  <?php } ?>
 </body>
+
 </html>

@@ -19,23 +19,4 @@ class Stations extends CI_Controller {
 		$result['data']=$this->Stations_Model->display_records();
 		$this->load->view('stations/stationforms',$result);
 	}
-	//display data and update data for controllers
-	public function updatedata()
-	{
-		$stationId=$this->input->get('id');
-		$result['data']=$this->Stations_Model->displayrecordsById($stationId);
-		$this->load->view('stations/update_records',$result);
-			if($this->input->post('update'))
-			{
-				$stationHours=$this->input->post('stationHours');
-				$stationMinutes=$this->input->post('stationMinutes');
-				$stationSeconds=$this->input->post('stationSeconds');
-				$stationHours2=$this->input->post('stationHours2');
-				$stationMinutes2=$this->input->post('stationMinutes2');
-				$stationSeconds2=$this->input->post('stationSeconds2');
-				$this->Stations_Model->update_records($stationHours,$stationMinutes,$stationSeconds,$stationHours2,$stationMinutes2,$stationSeconds2,$stationId);
-				
-				echo "time changed successfully";
-			}
-	}
 }
