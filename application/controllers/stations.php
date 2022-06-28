@@ -2,22 +2,21 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Stations extends CI_Controller {
-
-	public function baclaran()
+	public function __construct(){
+		parent::__construct();
+		$this->load->database();
+		$this->load->model('Stations_Model');
+	}
+	
+	public function station()
 	{
-		$data = array();
-		$data = $this->input->post();
-		$this->load->model('stations_model');
-		$this->load->view('stations/baclaran');
+		$stationId=$this->input->get('id');
+		$result['data']=$this->Stations_Model->displayrecordsById($stationId);
+		$this->load->view('stations/station',$result);
 	}
 
-    public function edsa()
-	{
-		$this->load->view('stations/edsa');
-	}
-    
-    public function libertad()
-	{
-		$this->load->view('stations/libertad');
+	public function stationforms(){
+		$result['data']=$this->Stations_Model->display_records();
+		$this->load->view('stations/stationforms',$result);
 	}
 }
