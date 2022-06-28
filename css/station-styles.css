@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+}
+
+body {
+    background-color: #FFFFFE;
+    font-family: 'Spline Sans Mono', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.stationNameSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.heading h1 {
+    font-family: 'Spline Sans', sans-serif;
+    color: #5a82f1;
+    font-weight: 700;
+    font-size: 8rem;
+    letter-spacing: -2px;
+    text-align: center;
+    user-select: none;
+    line-height: 0.6;
+    text-transform: uppercase;
+}
+
+.heading h2 {
+    font-family: 'Spline Sans', sans-serif;
+    color: #5a82f1;
+    font-weight: 700;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+    text-align: center;
+    user-select: none;
+}
+
+.timerSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: #5a82f1; */
+    padding: 5rem 0;
+}
+
+.timer {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.timer h1 {
+    font-family: 'Spline Sans', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.clock {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* width: 100%; */
+    background-color: #5a82f1;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.time {
+    font-family: 'Spline Sans Mono', sans-serif;
+    margin: 0 1rem;
+    background-color: #FFFFFE;
+    color: #5a82f1;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 6rem;
+    padding: 1rem;
+}
+
+.label {
+    text-align: center;
+    font-family: 'Spline Sans', sans-serif;
+    color: #FFFFFE;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid #5a82f1;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    transform: translateX(-50%);
+}
+
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid #5a82f1;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 80%;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .heading h1 {
+        font-size: 6rem;
+        letter-spacing: -6px;
+    }
+
+    .heading h2 {
+        font-size: 5rem;
+        letter-spacing: -2px;
+    }
+
+    .timerSection {
+        padding: 0 2rem;
+    }
+
+    .timer h1 {
+        font-size: 1rem;
+    }
+
+    .time {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .heading h1 {
+        font-size: 3.8rem;
+        letter-spacing: 0;
+    }
+
+    .heading h2 {
+        font-size: 3.5rem;
+        letter-spacing: 0;
+    }
+
+    .timerSection {
+        padding: 0 2rem;
+    }
+
+    .clock {
+        padding: 1rem;
+        border-radius: 0.6rem;
+    }
+
+    .time {
+        margin: 0 0.5rem;
+        border-radius: 0.4rem;
+    }
+
+    .timer h1 {
+        font-size: 0.8rem;
+    }
+
+    .time {
+        font-size: 2rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .timerSection {
+        padding: 0 2rem;
+    }
+
+    .timer h1 {
+        font-size: 1rem;
+    }
+
+    .time {
+        font-size: 1.8rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+}
