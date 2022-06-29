@@ -5,8 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>(Sabay) | United Nations Station</title>
-
+  <?php
+  $i = 1;
+  foreach ($data as $row) {
+    $num = $row->stationId;
+  ?>
+    <title> (Sabay) | <?php echo $row->stationName; ?> STATION </title>
+  <?php
+  }
+  ?>
   <!--=== FAVICON ===-->
   <link rel="shortcut icon" href="<?php echo base_url(); ?>css/img/favicon.ico" type="image/x-icon">
 
@@ -328,7 +335,7 @@
         if (secs < 10) {
           secs = "0" + secs;
         }
-        let time = `${mins} : ${secs}`;
+        let time = `${mins}:${secs}`;
 
         if (idnum == 20) {
           time = "N/A";
@@ -348,7 +355,7 @@
         if (secs2 < 10) {
           secs2 = "0" + secs2;
         }
-        let time2 = `${mins2} : ${secs2}`;
+        let time2 = `${mins2}:${secs2}`;
 
         if (idnum == 1) {
           time2 = "SOON";
