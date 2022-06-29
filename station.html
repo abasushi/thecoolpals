@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(Sabay) | Baclaran Station</title>
+    <title>(Sabay) | United Nations Station</title>
 
     <!--=== FAVICON ===-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;500;600;700&family=Spline+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Spline+Sans+Mono:wght@400;500;600;700&family=Spline+Sans:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- ===== FONT AWESOME ===== -->
@@ -34,55 +34,46 @@
                     <div class="logo">
                         <a href="index.html"><img src="img/logo.svg" alt="Sabay"></a>
                     </div>
-
-                    <div class="back">
-                        <a href="index.html">Go Back</a>
-                    </div>
                 </div>
             </div>
         </header>
     </div>
 
     <section>
-        <div class="stationNameSection">
-            <div class="heading">
-                <h1>Baclaran</h1>
-                <h2>Station</h2>
-            </div>
-        </div>
+        <div class="stationSection">
+            <div class="container">
+                <div class="navigationSection">
+                    <div class="backButton">
+                        <a href="index.html">Go Back</a>
+                    </div>
 
-        <div class="scrollButton">
-            <div class="scroll-down"></div>
-        </div>
-    </section>
-
-    <section>
-        <div class="timerSection">
-            <div class="north timer">
-                <h1>The next Northbound train will be arriving in</h1>
-
-                <div class="clock">
-                    <div class="time hours">01</div>
-                    <div class="time minutes">12</div>
-                    <div class="time seconds">50</div>
-
-                    <div class="label">Hours</div>
-                    <div class="label">Minutes</div>
-                    <div class="label">Seconds</div>
+                    <div class="stationName">
+                        <h1>United Nations Station</h1>
+                    </div>
                 </div>
-            </div>
 
-            <div class="south timer">
-                <h1>The next Southbound train will be arriving in</h1>
-
-                <div class="clock">
-                    <div class="time hours">01</div>
-                    <div class="time minutes">00</div>
-                    <div class="time seconds">00</div>
-
-                    <div class="label">Hours</div>
-                    <div class="label">Minutes</div>
-                    <div class="label">Seconds</div>
+                <div class="grid">
+                    <div class="northbound">
+                        <div class="north train">
+                            <h3>Northbound Train</h3>
+                        </div>
+    
+                        <div class="northCountdown">
+                            <h2>03:00</h2>
+                            <h4>Remaining</h4>
+                        </div>
+                    </div>
+    
+                    <div class="southbound">
+                        <div class="south train">
+                            <h3>Southbound Train</h3>
+                        </div>
+    
+                        <div class="southCountdown">
+                            <h2>03:00</h2>
+                            <h4>Remaining</h4>
+                        </div>
+                    </div>            
                 </div>
             </div>
         </div>
@@ -306,36 +297,36 @@
             reset: true,
         });
 
-        ScrollReveal().reveal('.heading h1', {
+        ScrollReveal().reveal('.backButton, .stationName', {
             delay: 100,
-            interval: 100,
-            duration: 500,
+            duration: 800,
             distance: '20px',
             origin: 'top'
         });
 
-        ScrollReveal().reveal('.heading h2', {
-            delay: 100,
-            interval: 100,
-            duration: 500,
-            distance: '20px',
-            origin: 'bottom'
-        });
-
-        ScrollReveal().reveal('.timer', {
-            delay: 100,
-            interval: 100,
-            duration: 500,
-            distance: '40px',
-        });
-
-        ScrollReveal().reveal('.footer-section', {
+        ScrollReveal().reveal('.northbound', {
             delay: 100,
             interval: 100,
             duration: 800,
-            distance: '30px',
-            origin: 'bottom'
+            distance: '20px',
+            origin: 'left'
         });
+
+        ScrollReveal().reveal('.southbound', {
+            delay: 100,
+            interval: 100,
+            duration: 800,
+            distance: '20px',
+            origin: 'right'
+        });
+
+        // ScrollReveal().reveal('.footer-section', {
+        //     delay: 100,
+        //     interval: 100,
+        //     duration: 800,
+        //     distance: '30px',
+        //     origin: 'bottom'
+        // });
     </script>
 </body>
 

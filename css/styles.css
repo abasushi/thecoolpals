@@ -96,6 +96,8 @@ a {
     grid-gap: 20px;
     place-items: center;
     width: 100%;
+    padding: 2rem 0;
+    /* background-color: #0E0E0E; */
 }
 
 .stationCard {
@@ -123,6 +125,7 @@ a {
     font-family: 'Spline Sans Mono', sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
+    text-transform: uppercase;
     background-color: #FFFFFE;
     color: #5a82f1;
     padding: 0.5rem 1rem;

@@ -13,7 +13,7 @@ a {
 
 .big-wrapper {
     padding: 3rem 4rem;
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -48,19 +48,6 @@ a {
     border: #FFFFFE solid 2px;
 }
 
-.back a {
-    font-family: 'Spline Sans Mono', sans-serif;
-    color: #5a82f1;
-    font-size: 1.2rem;
-    user-select: none;
-    margin-left: 1rem;
-}
-
-.stationName h1 {
-    font-size: 1.9rem;
-    color: #5a82f1;
-}
-
 header {
     position: relative;
     z-index: 70;
@@ -88,6 +75,7 @@ header .nav-container {
     }
 
     .big-wrapper {
+        position: relative;
         padding: 2rem;
     }
 
