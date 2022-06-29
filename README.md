@@ -64,6 +64,13 @@ Jun 26 - 5:30 PM
 + things to do:
 	display southbound timer
 	admin cannot update timer
+
 Jun 28 - 7:30 PM
 + Backend Finish
 + Combine Front and Backend
+
+Jun 29 - 12:26 PM
++Combining of Front and Back done
++minor frontend fixes for admin login and admin update records
++database value onegai update
++may issue: no logout function 

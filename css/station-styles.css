@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+}
+
+body {
+    background-color: #FFFFFE;
+    font-family: 'Spline Sans Mono', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.stationSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0E0E0E; */
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.navigationSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.backButton a {
+    display: block;
+    font-family: 'Spline Sans Mono', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid #EE4D66;
+    color: #EE4D66;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    transition: 0.4s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.backButton a:hover {
+    background-color: #EE4D66;
+    color: #FFFFFE;
+}
+
+.stationName h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #5a82f1;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+
+
+.train {
+    background-color: #5a82f1;
+    /* padding: 0.8rem 0; */
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.train h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #FFFFFE;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.northCountdown,
+.southCountdown {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #5a82f1;
+    padding: 0.8rem 0;
+    border-radius: 0.4rem;
+    text-align: center;
+    grid-gap: 1rem;
+    display: block;
+}
+
+.northCountdown>div,
+.southCountdown>div {
+    font-family: 'Spline Sans Mono', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: #FFFFFE;
+    line-height: 1;
+}
+
+.northCountdown h4,
+.southCountdown h4 {
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    font-size: 1rem;
+    color: #FFFFFE;
+}
+
+@media screen and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .stationSection {
+        height: 100%;
+        padding: 2rem 0;
+    }
+
+    .navigationSection {
+        display: block;
+        margin: 0;
+    }
+
+    .stationName {
+        margin: 1rem 0;
+    }
+
+    .stationName h1 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .stationName h1 {
+        font-size: 1.7rem;
+    }
+
+    .train h3 {
+        font-size: 1rem;
+    }
+
+    .northCountdown,
+    .southCountdown {
+        margin: 0;
+    }
+
+    .northCountdown h2,
+    .southCountdown h2 {
+        font-size: 3rem;
+    }
+
+    .northCountdown h4,
+    .southCountdown h4 {
+        font-size: 0.8rem;
+    }
+}

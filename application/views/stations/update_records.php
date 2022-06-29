@@ -13,27 +13,27 @@
     <form method="post">
       <table width="600" border="1" cellspacing="5" cellpadding="5">
         <tr>
-          <td width="230">Enter new station arrival Hour </td>
+          <td width="400">Enter new Northbound train arrival Hour </td>
           <td width="329"><input type="number" name="stationHours" min="0" max="23" value="<?php echo $row->stationHours; ?>" /></td>
         </tr>
         <tr>
-          <td width="230">Enter new station arrival minute </td>
+          <td width="400">Enter new Northbound train arrival minute </td>
           <td width="329"><input type="number" name="stationMinutes" min="0" max="59" value="<?php echo $row->stationMinutes; ?>" /></td>
         </tr>
         <tr?>
-          <td width="230">Enter new station arrival seconds </td>
+          <td width="400">Enter new Northbound train arrival seconds </td>
           <td width="329"><input type="number" name="stationSeconds" min="0" max="59" value="<?php echo $row->stationSeconds; ?>" /></td>
           </tr>
           <tr>
-            <td width="230">Enter new station arrival Hour2 </td>
+            <td width="400">Enter new Southbound train arrival Hour </td>
             <td width="329"><input type="number" name="stationHours2" min="0" max="23" value="<?php echo $row->stationHours2; ?>" /></td>
           </tr>
           <tr>
-            <td width="230">Enter new station arrival minute2 </td>
+            <td width="400">Enter new Southbound train arrival minute </td>
             <td width="329"><input type="number" name="stationMinutes2" min="0" max="59" value="<?php echo $row->stationMinutes2; ?>" /></td>
           </tr>
           <tr>
-            <td width="230">Enter new station arrival seconds2 </td>
+            <td width="400">Enter new Southbound train arrival seconds </td>
             <td width="329"><input type="number" name="stationSeconds2" min="0" max="59" value="<?php echo $row->stationSeconds2; ?>" /></td>
           </tr>
           <td colspan="2" align="center">
@@ -42,9 +42,6 @@
           </tr>
       </table>
     </form>
-    <!--palagay nito sa another php file tas pag kasubmit redirect ulet dito-->
-    <br>
-    <br>
     <br>
     <div class="box">
       <label>Northbound
@@ -78,13 +75,13 @@
 
         if (setSeconds < nowSeconds) {
           do {
-            setSeconds = setSeconds + 300;
+            setSeconds = setSeconds + 400;
           }
           while (setSeconds < nowSeconds)
         }
         if (setSeconds2 < nowSeconds) {
           do {
-            setSeconds2 = setSeconds2 + 300;
+            setSeconds2 = setSeconds2 + 400;
           }
           while (setSeconds2 < nowSeconds)
         }
