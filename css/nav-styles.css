@@ -5,7 +5,7 @@ a {
 .index-wrapper {
     padding: 3rem 4rem;
     position: fixed;
-    width: 100%;
+    /* width: 100%; */
     top: 0;
     left: 0;
     z-index: 100;
@@ -14,7 +14,7 @@ a {
 .big-wrapper {
     padding: 3rem 4rem;
     position: fixed;
-    width: 100%;
+    /* width: 100%; */
     top: 0;
     left: 0;
     z-index: 100;
@@ -83,7 +83,7 @@ header .nav-container {
         width: 45px;
     }
 
-    .back a{
+    .back a {
         font-size: 1rem;
     }
 }
