@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+input {
+    font-family: 'Spline Sans Mono', monospace;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    position: relative;
+    width: 100%;
+    background-color: #FFFFFE;
+}
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logInForm {
+    max-width: 380px;
+    width: 100%;
+}
+
+.logInForm h3 {
+    color: #5a82f1;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
+    user-select: none;
+    display: none;
+}
+
+.logInForm h2 {
+    font-size: 2.2rem;
+    color: #16161A;
+    margin-bottom: 1rem;
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+
+.input-field {
+    margin: 1rem 0;
+}
+
+.input-field input {
+    width: 100%;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+    padding: 1rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: #16161A;
+    letter-spacing: 0;
+
+    background-color: #f0f0f0;
+}
+
+.input-field input:focus {
+    position: relative;
+    border: 2px solid #3667bd;
+}
+
+.input-field input::placeholder {
+    color: #AAAAAA;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.submit-field input {
+    width: 100%;
+    background-color: #5a82f1;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-transform: lowercase;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-field input:hover {
+    background-color: #3667bd;
+}
+
+.left-panel {
+    pointer-events: all;
+    background-image: url('./img/train_graphic.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.upper-content h3 {
+    color: #FFFFFE;
+    font-weight: 500;
+    opacity: 70%;
+    text-shadow: 5px 2px 20px #050505;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    user-select: none;
+}
+
+.upper-content p,
+.lower-content p {
+    font-size: 1rem;
+    color: #FFFFFE;
+    opacity: 70%;
+}
+
+.upper-content h1 {
+    color: #FFFFFE;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 700;
+    /* letter-spacing: -5px; */
+    text-shadow: 2px 2px 1rem #050505;
+    line-height: 1.1;
+    font-size: 4rem;
+}
+
+@media screen and (min-width: 1300px) {
+    .upper-content h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form-container{
+        padding: 0 1.5rem;
+    }
+
+    .upper-content h3 {
+        font-size: 1rem;
+    }
+
+    .upper-content h1 {
+        font-size: 3rem;
+    }
+
+    .upper-content p,
+    .lower-content p {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .grid-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .logInForm h3 {
+        display: flex;
+    }
+}
